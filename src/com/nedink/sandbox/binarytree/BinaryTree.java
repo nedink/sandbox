@@ -13,7 +13,10 @@ public class BinaryTree {
         String input;
 
         while (true) {
-            System.out.println(node.printTree());
+
+//            System.out.println(node.printTree());
+            BinaryNode.traverseDFS(node);
+
             input = scanner.next();
             switch (input) {
                 case "l":

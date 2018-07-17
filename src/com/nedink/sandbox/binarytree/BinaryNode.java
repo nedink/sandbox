@@ -1,6 +1,7 @@
 package com.nedink.sandbox.binarytree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class BinaryNode {
@@ -27,15 +28,44 @@ public class BinaryNode {
         return true;
     }
 
-    public static class RenderNode extends BinaryNode {
-        public int x;
-        public int y;
-        public RenderNode(BinaryNode parent) {
-            super(parent);
+    public BinaryNode copy() {
+        BinaryNode node = new BinaryNode(this.parent == null ? null : this.parent.copy());
+        node.leftChild = node.leftChild == null ? null : node.leftChild.copy();
+        node.rightChild = node.rightChild == null ? null : node.rightChild.copy();
+        return node;
+    }
+
+    public static void traverseDFS(BinaryNode node) {
+        while (node.parent != null) node = node.parent;
+        List<BinaryNode> checked = new LinkedList<>();
+
+        while(node != null) {
+            if (node.leftChild != null && !checked.contains(node.leftChild)) {
+//                System.out.println("going left, adding to checked");
+                System.out.println("<-");
+                node = node.leftChild;
+                checked.add(node);
+            }
+            else if (node.rightChild != null && !checked.contains(node.rightChild)) {
+//                System.out.println("going right, adding to checked");
+                System.out.println("->");
+                node = node.rightChild;
+                checked.add(node);
+            }
+            else {
+//                System.out.println("both checked, going up");
+                System.out.println("^");
+                node = node.parent;
+            }
         }
+
+        System.out.println("checked: " + checked.size());
     }
 
     public String printTree() {
+
+
+
         String out = "";
 
         // get root

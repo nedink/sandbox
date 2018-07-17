@@ -4,6 +4,13 @@ public class Node {
     int id;
     Node prev;
     Node next;
+
+    Node(Node copy, Node prev) {
+        this.id = copy.id;
+        this.prev = prev;
+        this.next = copy.next == null ? null : new Node(copy.next, this);
+    }
+
     Node(Node prev) {
         this.prev = prev;
 
