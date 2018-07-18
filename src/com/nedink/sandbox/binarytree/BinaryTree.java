@@ -15,7 +15,9 @@ public class BinaryTree {
         while (true) {
 
 //            System.out.println(node.printTree());
-            BinaryNode.traverseDFS(node);
+//            BinaryNode.traverseDFS(node);
+//            System.out.println("max left: " + BinaryNode.getMaxLeft(node));
+            System.out.println(BinaryNode.printMap(node));
 
             input = scanner.next();
             switch (input) {
