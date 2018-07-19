@@ -1,4 +1,4 @@
-package com.nedink.sandbox;
+package com.nedink.sandbox.sandbox;
 
 public class Sandbox {
 
