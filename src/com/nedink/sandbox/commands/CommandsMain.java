@@ -21,8 +21,8 @@ public class CommandsMain {
 //            }
 //            System.out.println(scanner.next());
 //            System.out.println(scanner.nextLine().trim());
-            for (String s : scanner.nextLine().trim().split())
-                System.out.println(s);
+//            for (String s : scanner.nextLine().trim().split())
+//                System.out.println(s);
 //            switch (commandType) {
 //                case QUIT:
 //                    System.exit(0);
