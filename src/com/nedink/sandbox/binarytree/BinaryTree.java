@@ -53,8 +53,4 @@ public class BinaryTree {
             }
         }
     }
-
-    static void printTree() {
-
-    }
 }

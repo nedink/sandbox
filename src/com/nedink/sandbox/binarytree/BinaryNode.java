@@ -29,13 +29,6 @@ public class BinaryNode {
         return true;
     }
 
-    public BinaryNode copy() {
-        BinaryNode node = new BinaryNode(this.parent == null ? null : this.parent.copy());
-        node.leftChild = node.leftChild == null ? null : node.leftChild.copy();
-        node.rightChild = node.rightChild == null ? null : node.rightChild.copy();
-        return node;
-    }
-
     public static BinaryNode getRoot(BinaryNode node) {
         while (node.parent != null) node = node.parent;
         return node;
