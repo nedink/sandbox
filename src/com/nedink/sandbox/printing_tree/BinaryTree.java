@@ -1,4 +1,4 @@
-package com.nedink.sandbox.binarytree;
+package com.nedink.sandbox.printing_tree;
 
 import java.util.Scanner;
 
